@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portofolio - Nama Anda</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <div class="nav-left">
+    <a href="#" class="tab-button" onclick="showTab('home')">Home</a>
+    <a href="#" class="tab-button" onclick="showTab('about')">Tentang</a>
+    <a href="#" class="tab-button" onclick="showTab('projects')">Proyek</a>
+    <a href="#" class="tab-button" onclick="showTab('experience')">Pengalaman</a>
+    <a href="#" class="tab-button" onclick="showTab('skills')">Keterampilan</a>
+    <a href="#" class="tab-button" onclick="showTab('certificates')">Sertifikat</a>
+    <a href="#" class="tab-button" onclick="showTab('contact')">Kontak</a>
+  </div>
+
+  <div class="social-icons">
+    <a href="https://www.instagram.com/dycaaaa/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/aneska-dysa-a74016312" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/aneskadysa" target="_blank"><i class="fab fa-github"></i></a>
+  </div>
+
+  <div class="burger-menu" onclick="toggleBurgerMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+</nav>
+
+<!-- Konten -->
+<div class="container">
+
+  <!-- HOME -->
+  <div id="home" class="tab-content active home-parallax">
+    <div class="parallax-overlay">
+      <div class="section home-section">
+        <div class="home-content">
+          <div class="home-text">
+            <h1><span class="typing-text"></span></h1>
+            <p>Selamat datang di portofolio saya. Mari kita mulai petualangan digital ini!</p>
+            <a href="#" onclick="showTab('projects')" class="cta-button">Lihat Proyek Saya</a>
+          </div>
+          <div class="home-photo">
+            <img src="foto-saya.jpg" alt="Foto Saya" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TENTANG -->
+<div id="about" class="tab-content fade-in">
+  <div class="section">
+    <h2>Tentang Saya</h2>
+    <div class="about-content">
+      <img src="foto-saya.jpg" alt="Foto Saya" />
+      <p>
+        Mahasiswa aktif S1 Informatika (IPK 3.85) dengan minat besar dalam UI/UX Design dan Frontend Web Development. Terampil merancang antarmuka menggunakan Figma dan mengimplementasikannya ke dalam website dengan HTML, CSS, dan JavaScript. Berpengalaman dalam desain visual, ilustrasi digital, serta editing foto dan video. Terbiasa bekerja dalam tim, teliti, dan komunikatif. Pernah menjabat sebagai Lead UI Designer dalam proyek akhir Studi Independen UI/UX Design for Sustainable Green Economy di Startup Campus. Meraih Top 3 Performer dalam program tersebut serta mendapat surat rekomendasi langsung dari CEO Startup Campus atas kontribusi dalam proyek akhir.
+      </p>
+    </div>
+
+    <!-- PENGHARGAAN -->
+    <div class="awards">
+      <h3>Penghargaan</h3>
+      <div class="award-list">
+        <div class="award-card">
+          <img src="images/top1.jpg" alt="Top 1 Performer">
+          <div class="award-info">
+            <h4>Top 1 Performer - Sebelum proyek akhir</h4>
+            <p>Program UI/UX Design for Sustainable Green Economy oleh Startup Campus (Kampus Merdeka 2024).</p>
+            <span class="award-date">November 2024</span>
+            <a href="https://docs.google.com/spreadsheets/d/1zdWWiz6KtI0MzSC0ccLRwtWa3E0TSDSRwjjglPAZBj0/edit?gid=1566353356#gid=1566353356" target="_blank" class="award-link">Lihat Sertifikat</a>
+          </div>
+        </div>
+
+        <div class="award-card">
+          <img src="images/top3.jpg" alt="Top 3 Performer">
+          <div class="award-info">
+            <h4>Top 3 Performer – Setelah proyek akhir</h4>
+            <p>Program UI/UX Design for Sustainable Green Economy oleh Startup Campus (Kampus Merdeka 2024).</p>
+            <span class="award-date">Januari 2025</span>
+            <a href="https://drive.google.com/file/d/1AJQltnptCjdq4zRBzt-TdxkMZbnUExsW/view?usp=drive_link" target="_blank" class="award-link">Lihat Sertifikat</a>
+          </div>
+        </div>
+
+        <div class="award-card">
+          <img src="images/top3.jpg" alt="Surat Rekomendasi">
+          <div class="award-info">
+            <h4>Surat Rekomendasi Kerja dari CEO Startup Campus</h4>
+            <p>Diberikan sebagai bentuk penghargaan atas dedikasi dan pencapaian sebagai Top 3 Performer setelah proyek akhir.</p>
+            <span class="award-date">Januari 2025</span>
+            <a href="https://drive.google.com/file/d/1AJQltnptCjdq4zRBzt-TdxkMZbnUExsW/view?usp=drive_link" target="_blank" class="award-link">Lihat Surat</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROYEK -->
+<div id="projects" class="tab-content fade-in">
+  <div class="section">
+    <h2>Proyek Saya</h2>
+    <div class="project-grid">
+
+      <!-- Contoh Satu Project Card -->
+      <div class="project-card">
+        <img src="images/sushi_menu.jpg" alt="Responsive Menu Sushi" />
+        <h3>Responsive Menu Sushi</h3>
+        <p>Halaman menu sushi responsif dengan HTML5 & CSS3.<br><small>April 2025</small></p>
+        <div class="button-group">
+          <a href="https://responsive-web-design-tgs1.vercel.app/" target="_blank" class="cta-button">Lihat Proyek</a>
+          <a href="https://github.com/aneskadysa/ResponsiveWebDesignTugas1.git" target="_blank" class="cta-button secondary">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/aneska_noodle.jpg" alt="Website Responsif Aneska Noodle" />
+        <h3>Website Responsif Aneska Noodle</h3>
+        <p>Web restoran mie responsif dengan Bootstrap & JS.<br><small>Mei 2025</small></p>
+        <div class="button-group">
+          <a href="https://aneska-noodle.vercel.app" target="_blank" class="cta-button">Lihat Proyek</a>
+          <a href="https://github.com/aneskadysa/AneskaNoodle.git" target="_blank" class="cta-button secondary">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/flutter_sushi.jpg" alt="Aplikasi Pemesanan Sushi Flutter" />
+        <h3>Aplikasi Pemesanan Sushi (Flutter)</h3>
+        <p>Aplikasi mobile Flutter dengan fitur keranjang & checkout.<br><small>Mei 2025</small></p>
+        <div class="button-group">
+          <a href="https://github.com/aneskadysa/AneskaSushi/blob/main/APK/app-release.apk" target="_blank" class="cta-button">Lihat Proyek</a>
+          <a href="https://github.com/aneskadysa/AneskaSushi.git" target="_blank" class="cta-button secondary">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/tanitera_uiux.jpg" alt="UI/UX E-commerce Tanitera" />
+        <h3>UI/UX E-commerce Tanitera</h3>
+        <p>Desain UI & prototipe e-commerce green economy di Figma.<br><small>Oktober 2024</small></p>
+        <div class="button-group">
+          <a href="https://www.figma.com/proto/tanitera-prototype" target="_blank" class="cta-button">Lihat Proyek</a>
+          <a href="https://www.figma.com/design/sAlkVrHf2rFHJ8iXaIzsIq/Alexandrite?node-id=133-20&p=f&t=YOa3khND9NuWNHWN-0" target="_blank" class="cta-button secondary">Figma</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/fore_coffee_redesign.jpg" alt="Redesign Aplikasi Fore Coffee" />
+        <h3>Redesign Aplikasi Fore Coffee</h3>
+        <p>Mendesain ulang aplikasi agar lebih modern & mudah digunakan.<br><small>Oktober 2024</small></p>
+        <div class="button-group">
+          <a href="https://www.figma.com/proto/fore-coffee-redesign" target="_blank" class="cta-button">Lihat Proyek</a>
+          <a href="https://github.com/aneska-dev/fore-coffee-redesign" target="_blank" class="cta-button secondary">Figma</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/nasi_hainan.jpg" alt="Aplikasi Pemesanan Nasi Hainan" />
+        <h3>Aplikasi Pemesanan Nasi Hainan</h3>
+        <p>Aplikasi CRUD pemesanan Nasi Hainan dengan PHP & MySQL.<br><small>Juli 2024</small></p>
+        <div class="button-group">
+          <a href="https://aneska-hainan.infinityfreeapp.com" target="_blank" class="cta-button">Lihat Proyek</a>
+          <a href="https://github.com/aneska-dev/hainan-ordering-app" target="_blank" class="cta-button secondary">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/poster_editing.jpg" alt="Pengeditan Poster" />
+        <h3>Pengeditan Poster</h3>
+        <p>Mendesain poster dengan Canva & Illustrator.<br><small>November 2023</small></p>
+        <div class="button-group">
+          <a href="https://drive.google.com/file/d/aneska-poster-design" target="_blank" class="cta-button">Lihat Proyek</a>
+          <a href="https://github.com/aneska-dev/poster-designs" target="_blank" class="cta-button secondary">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/aws_static_website.jpg" alt="Situs Web Statis di AWS" />
+        <h3>Situs Web Statis di AWS</h3>
+        <p>Situs portofolio online dihosting di AWS.<br><small>Desember 2022</small></p>
+        <div class="button-group">
+          <a href="http://aneska-portfolio.s3-website-ap-southeast-1.amazonaws.com" target="_blank" class="cta-button">Lihat Proyek</a>
+          <a href="https://github.com/aneskadysa/CapstoneCloud-225410055.git" target="_blank" class="cta-button secondary">GitHub</a>
+        </div>
+      </div>
+      
+
+    </div>
+  </div>
+</div>
+
+ <!-- PENGALAMAN -->
+<div id="experience" class="tab-content fade-in">
+  <div class="section">
+    <h2>Pengalaman</h2>
+
+    <div class="experience-section">
+
+      <div class="experience-item">
+        <img src="images/StartupCampus.jpg" alt="Startup Campus" />
+        <div class="experience-details">
+          <h3>Startup Campus — <span>UI/UX Designer (Lead)</span></h3>
+          <p>Agustus 2024 – Desember 2024</p>
+          <ul>
+            <li>Merancang prototipe dengan Figma dan high-fidelity UI.</li>
+            <li>Memimpin proyek akhir <strong>“Tanitera”</strong>, aplikasi e-commerce pertanian.</li>
+            <li>Meraih <strong>Top 3 Performer</strong> dan surat rekomendasi dari CEO Startup Campus.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <img src="images/ShopeeStore.jpg" alt="Shopee Store" />
+        <div class="experience-details">
+          <h3>Aneska_dotcom (Shopee) — <span>Owner / Product Designer</span></h3>
+          <p>Desember 2023 – Sekarang</p>
+          <ul>
+            <li>Desain produk digital & pengelolaan konten Shopee Store.</li>
+            <li>Meningkatkan penjualan hingga 2x lipat dengan strategi visual dan konten.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <img src="images/MamimoPizza.jpg" alt="Mamimo Pizza" />
+        <div class="experience-details">
+          <h3>Mamimo Pizza — <span>Foto & Video Editor</span></h3>
+          <p>Juli 2021 – September 2022</p>
+          <ul>
+            <li>Mengedit visual promosi untuk Instagram dan media sosial.</li>
+            <li>Berhasil meningkatkan penjualan dari 15 menjadi 47 pizza/hari.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <img src="images/PromotorKampus.jpg" alt="Promotor Kampus" />
+        <div class="experience-details">
+          <h3>Universitas Teknologi Digital Indonesia — <span>Promotor EXPO</span></h3>
+          <p>Februari 2024 – Sekarang</p>
+          <ul>
+            <li>Mempromosikan kampus ke sekolah-sekolah di wilayah Yogyakarta.</li>
+            <li>Kontribusi terhadap peningkatan jumlah pendaftar.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <img src="images/Wisuda.jpg" alt="Wisuda" />
+        <div class="experience-details">
+          <h3>Universitas Teknologi Digital Indonesia — <span>Panitia Wisuda</span></h3>
+          <p>Maret 2024 – Sekarang</p>
+          <ul>
+            <li>Melayani tamu dan menyerahkan ijazah kepada lulusan.</li>
+            <li>Meningkatkan kesan positif & kelancaran acara wisuda kampus.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  <!-- KETERAMPILAN -->
+<div id="skills" class="tab-content fade-in">
+  <div class="section">
+    <h2>Keterampilan</h2>
+
+    <!-- === SKILL TEKNIS === -->
+    <h3 class="skill-category">Skill Teknis</h3>
+    <div class="skills-carousel">
+      <div class="skill-item"><i class="devicon-html5-plain colored"></i><p>HTML5</p></div>
+      <div class="skill-item"><i class="devicon-css3-plain colored"></i><p>CSS3</p></div>
+      <div class="skill-item"><i class="devicon-javascript-plain colored"></i><p>JavaScript</p></div>
+      <div class="skill-item"><i class="devicon-php-plain colored"></i><p>PHP</p></div>
+      <div class="skill-item"><i class="devicon-java-plain colored"></i><p>Java</p></div>
+      <div class="skill-item"><i class="devicon-python-plain colored"></i><p>Python</p></div>
+      <div class="skill-item"><i class="devicon-mysql-plain colored"></i><p>MySQL</p></div>
+      <div class="skill-item"><p>MongoDB</p></div>
+      <div class="skill-item"><p>Content Marketing</p></div>
+      <div class="skill-item"><p>Social Media</p></div>
+      <div class="skill-item"><p>Pemasaran Digital</p></div>
+    </div>
+
+    <!-- === ALAT === -->
+    <h3 class="skill-category">Alat</h3>
+    <div class="skills-carousel">
+      <div class="skill-item"><i class="devicon-figma-plain colored"></i><p>Figma</p></div>
+      <div class="skill-item"><i class="devicon-canva-original"></i><p>Canva</p></div>
+      <div class="skill-item"><i class="devicon-vscode-plain colored"></i><p>VS Code</p></div>
+      <div class="skill-item"><img src="images/word-icon.svg" alt="Word" /><p>Word</p></div>
+      <div class="skill-item"><img src="images/excel-icon.svg" alt="Excel" /><p>Excel</p></div>
+      <div class="skill-item"><img src="images/ppt-icon.svg" alt="PowerPoint" /><p>PowerPoint</p></div>
+    </div>
+
+    <!-- === DESAIN === -->
+    <h3 class="skill-category">Desain</h3>
+    <div class="skills-carousel">
+      <div class="skill-item"><p>UI/UX Design</p></div>
+      <div class="skill-item"><p>Wireframing</p></div>
+      <div class="skill-item"><p>Prototyping</p></div>
+      <div class="skill-item"><p>Design System</p></div>
+      <div class="skill-item"><p>Photo & Video Editing</p></div>
+      <div class="skill-item"><p>Drawing / Ilustrasi</p></div>
+      <div class="skill-item"><p>Branding & Visual Content</p></div>
+    </div>
+
+    <!-- === METODOLOGI DESAIN === -->
+    <h3 class="skill-category">Metodologi Desain</h3>
+    <div class="skills-carousel">
+      <div class="skill-item"><p>Design Thinking</p></div>
+      <div class="skill-item"><p>User Research</p></div>
+      <div class="skill-item"><p>Usability Testing</p></div>
+      <div class="skill-item"><p>User Persona</p></div>
+      <div class="skill-item"><p>User Journey Mapping</p></div>
+      <div class="skill-item"><p>Heuristic Evaluation</p></div>
+    </div>
+
+    <!-- === NON-TEKNIS === -->
+    <h3 class="skill-category">Non-Teknis</h3>
+    <div class="skills-carousel">
+      <div class="skill-item"><p>Manajemen Waktu</p></div>
+      <div class="skill-item"><p>Kerja Tim</p></div>
+      <div class="skill-item"><p>Teliti terhadap Detail</p></div>
+      <div class="skill-item"><p>Komunikasi yang Baik</p></div>
+      <div class="skill-item"><p>Berpikir Kreatif</p></div>
+      <div class="skill-item"><p>Pemecahan Masalah</p></div>
+    </div>
+  </div>
+</div>
+
+  <!-- SERTIFIKAT -->
+<div id="certificates" class="tab-content fade-in">
+  <div class="section">
+    <h2>Sertifikat</h2>
+    <div class="certificate-section">
+      <div class="certificate-item">
+        <img src="images/cert-zaky.jpg" alt="Studi Independen Bersertifikat">
+        <div class="certificate-details">
+          <h3>Studi Independen Bersertifikat</h3>
+          <p>Yayasan Bakti Achmad Zaky, Kampus Merdeka Angkatan 7</p>
+          <span>Desember 2024</span>
+        </div>
+      </div>
+      <div class="certificate-item">
+        <img src="images/cert-startup.jpg" alt="UI/UX Design for Green Economy">
+        <div class="certificate-details">
+          <h3>UI/UX Design for Sustainable Green Economy</h3>
+          <p>Startup Campus, Batch 7</p>
+          <span>Desember 2024</span>
+        </div>
+      </div>
+      <div class="certificate-item">
+        <img src="images/cert-cyberhub.jpg" alt="Keamanan Siber di Era Digital">
+        <div class="certificate-details">
+          <h3>Keamanan Siber di Era Digital</h3>
+          <p>CyberHub</p>
+          <span>Maret 2024</span>
+        </div>
+      </div>
+      <div class="certificate-item">
+        <img src="images/pelatihan-umkm.jpg" alt="Kewirausahaan Digital untuk UMKM">
+        <div class="certificate-details">
+          <h3>Kewirausahaan Digital untuk UMKM</h3>
+          <p>DEA, BPSDMP Kominfo Surabaya</p>
+          <span>2024</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- KONTAK -->
+<div id="contact" class="tab-content fade-in">
+  <div class="contact-container">
+    <h2 class="contact-heading">Hubungi Saya</h2>
+    <p class="contact-subtext">
+      Tertarik bekerja sama, ada pertanyaan, atau ingin berdiskusi? Silakan kirim pesanmu.
+    </p>
+
+    <form action="https://formspree.io/f/xwpbonrg" method="POST" class="contact-form">
+      <div class="input-group">
+        <input type="text" name="name" placeholder="Nama Lengkap" required />
+      </div>
+      <div class="input-group">
+        <input type="email" name="email" placeholder="Alamat Email" required />
+      </div>
+      <div class="input-group">
+        <textarea name="message" rows="5" placeholder="Tulis Pesan Anda..." required></textarea>
+      </div>
+      <button type="submit">Kirim Pesan</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  // Fungsi menampilkan tab sesuai id
+  function showTab(tabId) {
+    const tabs = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      if (tab.id === tabId) {
+        tab.classList.add('active');
+        tab.classList.remove('fade-in');
+      } else {
+        tab.classList.remove('active');
+        tab.classList.add('fade-in');
+      }
+    });
+
+    // Jika mau highlight navbar juga bisa ditambah di sini
+  }
+
+  // Burger menu toggle untuk mobile
+  function toggleBurgerMenu() {
+    const navLeft = document.querySelector('.nav-left');
+    navLeft.classList.toggle('active');
+  }
+
+  // Efek mengetik pada home (contoh sederhana)
+  document.addEventListener('DOMContentLoaded', () => {
+    showTab('home'); // default tab aktif
+
+    const typingText = document.querySelector('.typing-text');
+    const words = ['Haloo, Aku Aneska Dysa Maharani', 'UI/UX Designer', 'Frontend Developer', 'Mahasiswa Informatika'];
+    let wordIndex = 0;
+    let letterIndex = 0;
+
+    function type() {
+      if (letterIndex <= words[wordIndex].length) {
+        typingText.textContent = words[wordIndex].substring(0, letterIndex);
+        letterIndex++;
+        setTimeout(type, 150);
+      } else {
+        setTimeout(erase, 1500);
+      }
+    }
+
+    function erase() {
+      if (letterIndex >= 0) {
+        typingText.textContent = words[wordIndex].substring(0, letterIndex);
+        letterIndex--;
+        setTimeout(erase, 100);
+      } else {
+        wordIndex = (wordIndex + 1) % words.length;
+        setTimeout(type, 500);
+      }
+    }
+
+    type();
+  });
+</script>
+
+<script>
+  document.querySelectorAll('.skills-carousel').forEach(carousel => {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    carousel.addEventListener('mousedown', (e) => {
+      isDown = true;
+      carousel.classList.add('dragging');
+      startX = e.pageX - carousel.offsetLeft;
+      scrollLeft = carousel.scrollLeft;
+    });
+
+    carousel.addEventListener('mouseleave', () => {
+      isDown = false;
+      carousel.classList.remove('dragging');
+    });
+
+    carousel.addEventListener('mouseup', () => {
+      isDown = false;
+      carousel.classList.remove('dragging');
+    });
+
+    carousel.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - carousel.offsetLeft;
+      const walk = (x - startX) * 1.5; // kecepatan drag
+      carousel.scrollLeft = scrollLeft - walk;
+    });
+  });
+</script>
+
+<script>
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("form-status");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (response.ok) {
+      status.textContent = "Pesan berhasil dikirim!";
+      form.reset();
+    } else {
+      status.textContent = "Gagal mengirim pesan. Silakan coba lagi.";
+      status.style.color = "red";
+    }
+  });
+</script>
+
+</body>
+</html>
