@@ -240,22 +240,25 @@ nav {
   }
 }
 
-/* === Tentang === */
+/* === Tentang (About) === */
 .about-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
   text-align: center;
+  padding: 0 20px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .about-content img {
-  width: 140px;
-  height: 140px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   object-fit: cover;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
 }
 
 .about-content img:hover {
@@ -263,109 +266,266 @@ nav {
 }
 
 .about-content p {
-  max-width: 800px;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #555;
-  line-height: 1.8;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-/* === Penghargaan === */
+/* === Penghargaan (Estetik dan Responsif) === */
 .awards {
   margin-top: 40px;
   width: 100%;
   max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
+  padding: 0 20px;
 }
 
 .awards h3 {
   text-align: center;
-  font-size: 1.5rem;
-  color: #333;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #222;
   margin-bottom: 30px;
 }
 
+/* Grid untuk daftar penghargaan */
 .award-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px 24px;
+  padding: 0 10px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
+/* Kartu penghargaan dengan gambar full lebar */
 .award-card {
   display: flex;
-  align-items: flex-start;
-  background: #f9f9f9;
-  border-radius: 15px;
-  padding: 15px 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  gap: 15px;
-  transition: transform 0.3s;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 0; /* supaya gambar bisa melebar penuh */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* supaya border-radius memotong gambar */
+  text-align: left;
 }
 
 .award-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
 }
 
 .award-card img {
-  width: 80px;
-  height: 80px;
-  border-radius: 12px;
+  width: 100%; /* lebar penuh */
+  height: auto;
   object-fit: cover;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 16px 16px 0 0; /* rounding hanya atas */
+  box-shadow: none;
+  margin: 0;
 }
 
 .award-info {
-  flex: 1;
+  padding: 16px 20px;
 }
 
 .award-info h4 {
-  margin: 0;
-  font-size: 1.05rem;
-  color: #222;
+  margin: 0 0 6px 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #111;
 }
 
 .award-info p {
   font-size: 0.9rem;
-  color: #555;
-  margin: 8px 0;
+  color: #444;
+  margin: 6px 0;
+  line-height: 1.4;
 }
 
 .award-date {
-  font-size: 0.8rem;
-  color: #888;
-}
-
-.award-link {
-  display: inline-block;
-  margin-top: 8px;
   font-size: 0.85rem;
-  color: #007bff;
-  text-decoration: none;
+  color: #777;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* === Penghargaan (Estetik dan Responsif) === */
+.awards {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 900px;
+  margin-inline: auto;
+  padding: 40px 20px;
+  background-color: #f7f9fc;  /* background sangat soft agar kartu lebih menonjol */
+  border-radius: 20px;
+}
+
+.awards h3 {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 30px;
+}
+
+/* Grid daftar penghargaan */
+.award-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px 30px;
+  padding: 0 10px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Kartu penghargaan */
+.award-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 0;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
+  border: 1px solid #e2e8f0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  text-align: left;
+}
+
+.award-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.15);
+}
+
+/* Ukuran gambar disamakan dengan object-fit */
+.award-card img {
+  width: 100%;
+  height: 180px;       /* tinggi tetap agar seragam */
+  object-fit: cover;   /* crop agar gambar memenuhi area */
+  border-radius: 16px 16px 0 0;
+  box-shadow: none;
+  margin: 0;
+  display: block;
+}
+
+.award-info {
+  padding: 16px 20px;
+}
+
+.award-info h4 {
+  margin: 0 0 6px 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #111;
+}
+
+.award-info p {
+  font-size: 0.9rem;
+  color: #444;
+  margin: 6px 0;
+  line-height: 1.4;
+}
+
+.award-date {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Tombol Penghargaan */
+.award-button {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: #fff;
+  font-size: 0.81rem;
   font-weight: 500;
-  transition: color 0.3s;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  margin-top: 10px;
 }
 
-.award-link:hover {
-  color: #0056b3;
+.award-button:hover {
+  background: linear-gradient(135deg, #0056b3, #004080);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 86, 179, 0.25);
 }
 
-/* === Responsive === */
-@media (max-width: 600px) {
+/* === Tombol CV (Estetik & Minimalis) === */
+.cv-highlight {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.cv-button {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.85rem;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+  border: none;
+}
+
+.cv-button:hover {
+  background: linear-gradient(135deg, #0056b3, #004080);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 86, 179, 0.25);
+}
+
+/* RESPONSIF MOBILE */
+@media (max-width: 640px) {
+  .award-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 15px;
+  }
+
   .award-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    padding: 0;
   }
 
   .award-card img {
-    margin-bottom: 10px;
+    width: 100%;
+    height: 140px;  /* lebih pendek untuk mobile */
   }
 
   .award-info h4 {
-    font-size: 1rem;
+    font-size: 1.05rem;
+  }
+
+  .award-info p {
+    font-size: 0.85rem;
+  }
+
+  .award-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+    margin-top: 12px;
+  }
+
+  .cv-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
   }
 }
-
 
 /* === Pengalaman - Estetik Carousel Full Width Image === */
 .experience-section {
@@ -501,129 +661,117 @@ nav {
   }
 }
 
-/* === KETERAMPILAN === */
-.skill-category {
-  margin-top: 48px;
-  font-size: 1.1rem;
-  color: #007bff;
-  font-weight: 600;
-  border-left: 4px solid #007bff;
-  padding-left: 12px;
-  margin-bottom: 16px;
-  position: relative;
-}
-
-.skill-category::after {
-  content: "";
-  display: block;
-  width: 40px;
-  height: 3px;
-  background: #007bff;
-  margin-top: 6px;
-  border-radius: 2px;
-}
-
-/* Carousel Container */
-.skills-carousel {
+/* === KETERAMPILAN - HORIZONTAL SCROLL ESTETIK === */
+.skill-grid {
   display: flex;
+  flex-wrap: nowrap;
+  gap: 18px;
   overflow-x: auto;
-  gap: 16px;
-  padding: 12px 8px 24px;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
+  padding: 16px 0 36px;
   scrollbar-width: thin;
-  max-width: 100%;
-  white-space: nowrap;
+  scrollbar-color: #5a9bd4 #e0e0e0;
 }
 
-/* Scrollbar manual (horizontal) */
-.skills-carousel::-webkit-scrollbar {
-  height: 6px;
+.skill-grid::-webkit-scrollbar {
+  height: 8px;
 }
 
-.skills-carousel::-webkit-scrollbar-thumb {
-  background: #007bff;
-  border-radius: 4px;
+.skill-grid::-webkit-scrollbar-track {
+  background: #e0e0e0;
+  border-radius: 6px;
 }
 
-.skills-carousel::-webkit-scrollbar-track {
-  background: transparent;
+.skill-grid::-webkit-scrollbar-thumb {
+  background: #5a9bd4; /* biru medium */
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
 }
 
-/* Skill Item Style */
+.skill-grid::-webkit-scrollbar-thumb:hover {
+  background: #3b7dbf; /* biru lebih gelap saat hover */
+}
+
+@media (max-width: 600px) {
+  .skill-grid {
+    scrollbar-width: none;
+  }
+  .skill-grid::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 .skill-item {
   flex: 0 0 auto;
-  width: 140px;
+  width: 100px;
   text-align: center;
-  background: linear-gradient(135deg, #ffffff, #f3f7ff);
-  padding: 16px 12px;
-  border-radius: 18px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  scroll-snap-align: start;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
-  isolation: isolate;
-}
-
-.skill-item::before {
-  content: "";
-  position: absolute;
-  top: -10%;
-  left: -10%;
-  width: 120%;
-  height: 120%;
-  background: radial-gradient(circle at top left, #e3f2ff, transparent);
-  z-index: -1;
-  border-radius: 20px;
+  padding: 14px 10px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow:
+    0 8px 16px rgba(90, 155, 212, 0.12),
+    0 4px 6px rgba(90, 155, 212, 0.08);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s ease;
+  cursor: default;
+  user-select: none;
 }
 
 .skill-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+  transform: scale(1.1) translateY(-6px);
+  box-shadow:
+    0 16px 32px rgba(90, 155, 212, 0.24),
+    0 8px 12px rgba(90, 155, 212, 0.18);
 }
 
 .skill-item i,
 .skill-item img {
-  font-size: 36px;
-  width: 48px;
-  height: 48px;
-  margin-bottom: 10px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+  background: linear-gradient(135deg, #c3d9f9, #7fb3f7); /* biru muda gradient */
+  box-shadow:
+    0 4px 8px rgba(90, 155, 212, 0.15);
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  font-size: 26px;
+  color: #2255aa; /* biru tua */
+  padding: 12px;
+  margin-bottom: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.12));
+  transition: background 0.3s ease;
 }
 
-.skill-item img {
-  object-fit: contain;
+.skill-item:hover i,
+.skill-item:hover img {
+  background: linear-gradient(135deg, #7fb3f7, #3b7dbf); /* biru gelap saat hover */
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
 }
 
 .skill-item p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
   font-size: 0.78rem;
   margin: 0;
-  font-weight: 500;
-  color: #333;
+  color: #222;
   line-height: 1.3;
-  word-wrap: break-word;
+  user-select: none;
+  text-transform: capitalize;
+  letter-spacing: 0.03em;
 }
 
-/* Responsive tweak for mobile */
 @media (max-width: 600px) {
-  .skills-carousel {
-    gap: 12px;
-    padding: 12px 4px 20px;
-  }
-
   .skill-item {
-    width: 120px;
-    padding: 14px 10px;
+    width: 84px;
+    padding: 12px 8px;
   }
 
   .skill-item i,
   .skill-item img {
-    font-size: 30px;
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
+    font-size: 22px;
+    padding: 10px;
   }
 
   .skill-item p {
