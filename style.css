@@ -245,7 +245,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
   text-align: center;
   padding: 0 20px;
   max-width: 800px;
@@ -253,8 +253,8 @@ nav {
 }
 
 .about-content img {
-  width: 120px;
-  height: 120px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   object-fit: cover;
@@ -266,7 +266,7 @@ nav {
 }
 
 .about-content p {
-  font-size: 1rem;
+  font-size: 0.97rem;
   color: #555;
   line-height: 1.6;
   max-width: 600px;
@@ -275,97 +275,18 @@ nav {
 
 /* === Penghargaan (Estetik dan Responsif) === */
 .awards {
-  margin-top: 40px;
-  width: 100%;
-  max-width: 900px;
-  margin-inline: auto;
-  padding: 0 20px;
-}
-
-.awards h3 {
-  text-align: center;
-  font-size: 1.75rem;
-  font-weight: 600;
-  color: #222;
-  margin-bottom: 30px;
-}
-
-/* Grid untuk daftar penghargaan */
-.award-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 28px 24px;
-  padding: 0 10px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* Kartu penghargaan dengan gambar full lebar */
-.award-card {
-  display: flex;
-  flex-direction: column;
-  background-color: #fff;
-  border-radius: 16px;
-  padding: 0; /* supaya gambar bisa melebar penuh */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden; /* supaya border-radius memotong gambar */
-  text-align: left;
-}
-
-.award-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
-}
-
-.award-card img {
-  width: 100%; /* lebar penuh */
-  height: auto;
-  object-fit: cover;
-  border-radius: 16px 16px 0 0; /* rounding hanya atas */
-  box-shadow: none;
-  margin: 0;
-}
-
-.award-info {
-  padding: 16px 20px;
-}
-
-.award-info h4 {
-  margin: 0 0 6px 0;
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: #111;
-}
-
-.award-info p {
-  font-size: 0.9rem;
-  color: #444;
-  margin: 6px 0;
-  line-height: 1.4;
-}
-
-.award-date {
-  font-size: 0.85rem;
-  color: #777;
-  margin-bottom: 10px;
-  display: block;
-}
-
-/* === Penghargaan (Estetik dan Responsif) === */
-.awards {
-  margin-top: 40px;
+  margin-top: 50px;
   width: 100%;
   max-width: 900px;
   margin-inline: auto;
   padding: 40px 20px;
-  background-color: #f7f9fc;  /* background sangat soft agar kartu lebih menonjol */
+  background-color: #f7f9fc;
   border-radius: 20px;
 }
 
 .awards h3 {
   text-align: center;
-  font-size: 1.75rem;
+  font-size: 1.65rem;
   font-weight: 600;
   color: #222;
   margin-bottom: 30px;
@@ -375,7 +296,7 @@ nav {
 .award-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 32px 30px;
+  gap: 28px;
   padding: 0 10px;
   max-width: 900px;
   margin: 0 auto;
@@ -400,13 +321,11 @@ nav {
   box-shadow: 0 14px 32px rgba(0, 0, 0, 0.15);
 }
 
-/* Ukuran gambar disamakan dengan object-fit */
 .award-card img {
   width: 100%;
-  height: 180px;       /* tinggi tetap agar seragam */
-  object-fit: cover;   /* crop agar gambar memenuhi area */
+  height: 180px;
+  object-fit: cover;
   border-radius: 16px 16px 0 0;
-  box-shadow: none;
   margin: 0;
   display: block;
 }
@@ -417,7 +336,7 @@ nav {
 
 .award-info h4 {
   margin: 0 0 6px 0;
-  font-size: 1.15rem;
+  font-size: 1.12rem;
   font-weight: 600;
   color: #111;
 }
@@ -454,13 +373,7 @@ nav {
   margin-top: 10px;
 }
 
-.award-button:hover {
-  background: linear-gradient(135deg, #0056b3, #004080);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 86, 179, 0.25);
-}
-
-/* === Tombol CV (Estetik & Minimalis) === */
+/* Tombol CV */
 .cv-highlight {
   text-align: center;
   margin-top: 30px;
@@ -482,13 +395,76 @@ nav {
   border: none;
 }
 
-.cv-button:hover {
+.cv-button:hover,
+.award-button:hover {
   background: linear-gradient(135deg, #0056b3, #004080);
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(0, 86, 179, 0.25);
 }
 
-/* RESPONSIF MOBILE */
+/* === Pendidikan (Grid Minimalis Tanpa Warna Latar) === */
+.education {
+  max-width: 720px;
+  margin: 60px auto 40px;
+  padding: 0 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+  text-align: center;
+}
+
+.education h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 32px;
+  color: #111;
+}
+
+.education-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 660px;
+  text-align: left;
+  display: grid;
+  gap: 20px;
+}
+
+.education-list li {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px 24px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  border-left: 5px solid #007bff;
+  transition: box-shadow 0.3s ease;
+}
+
+.education-list li:hover {
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
+}
+
+.education-list h4 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.education-list span {
+  font-size: 0.9rem;
+  color: #555;
+  display: block;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.education-list p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #444;
+  margin: 0;
+}
+
+/* === Responsif Mobile === */
 @media (max-width: 640px) {
   .award-list {
     grid-template-columns: 1fr;
@@ -496,13 +472,8 @@ nav {
     padding: 0 15px;
   }
 
-  .award-card {
-    padding: 0;
-  }
-
   .award-card img {
-    width: 100%;
-    height: 140px;  /* lebih pendek untuk mobile */
+    height: 140px;
   }
 
   .award-info h4 {
@@ -513,16 +484,42 @@ nav {
     font-size: 0.85rem;
   }
 
-  .award-button {
+  .award-button,
+  .cv-button {
     width: 100%;
     padding: 10px;
     font-size: 0.9rem;
     margin-top: 12px;
+    text-align: center;
+  }
+
+  .award-button {
+    display: block;
+    margin: 12px auto 0;
   }
 
   .cv-button {
-    width: 100%;
-    padding: 10px;
+    display: block;
+    margin: 12px auto 0;
+  }
+
+  .education h3 {
+    font-size: 1.5rem;
+  }
+
+  .education-list li {
+    padding: 16px 18px;
+  }
+
+  .education-list h4 {
+    font-size: 1.1rem;
+  }
+
+  .education-list span {
+    font-size: 0.85rem;
+  }
+
+  .education-list p {
     font-size: 0.9rem;
   }
 }
@@ -778,6 +775,7 @@ nav {
     font-size: 0.7rem;
   }
 }
+
 
 /* === Proyek (Estetik & Bersih) === */
 .project-grid {
